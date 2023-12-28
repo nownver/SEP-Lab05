@@ -1,0 +1,2 @@
+class Hanoi(object):
+  pass
