@@ -111,12 +111,3 @@ class Simple_animation_window(QWidget):
         layout.addWidget(self.anim_area)
         self.setLayout(layout)
         self.setMinimumSize(330, 400)
-
-def main():
-    app = QApplication(sys.argv)
-    w = Simple_animation_window()
-    w.show()
-    return app.exec()
-
-if __name__ == "__main__":
-    sys.exit(main())
