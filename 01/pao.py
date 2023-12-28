@@ -34,12 +34,3 @@ class Bird(QWidget):
         if self.current_frame >= len(self.rabbit_frames):
             self.current_frame = 0
         self.update()
-
-def main():
-    app = QApplication(sys.argv)
-    w = Bird()
-    w.show()
-    return app.exec()
-    
-if __name__ == "__main__":
-    sys.exit(main())

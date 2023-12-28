@@ -4,6 +4,7 @@ from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 from jeff import Simple_drawing_window2
 from yok import *
+from pao import *
 
 def main():
     app = QApplication(sys.argv)
@@ -14,6 +15,8 @@ def main():
     w2 = Simple_drawing_window2()
     w2.show()
     
+    w3 = Bird()
+    w3.show()
     
     return app.exec()
 
