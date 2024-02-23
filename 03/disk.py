@@ -9,6 +9,7 @@ class Disk(object):
         self.dwidth = width
     
     def showdisk(self):
+        # t.pd()
         t.seth(0)
         t.fd(self.dwidth/2)
         t.lt(90)
@@ -34,12 +35,13 @@ class Disk(object):
         t.pd()
 
     def cleardisk(self):
-        t.seth(0)
+        t.pu()
+        t.goto(self.dxpos - self.dwidth/2, self.dypos - self.dheight/2)
         t.clear()
-        t.seth(0)
 
-d = Disk()
-d.showdisk()
-d.cleardisk()
 
-t.done()
+# d = Disk()
+# d.showdisk()
+# d.cleardisk()
+
+# t.done()

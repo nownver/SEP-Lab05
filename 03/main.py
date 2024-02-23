@@ -20,7 +20,7 @@ class Hanoi(object):
     if n == 1:
       self.move_disk(s,d)
     else:
-      self.move_disk(n-1,s,w,d)
+      self.move_tower(n-1,s,w,d)
       self.move_disk(s,d)
       self.move_tower(n-1,w,d,s)
       

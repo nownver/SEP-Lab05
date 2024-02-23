@@ -26,24 +26,31 @@ class Pole(object):
         t.fd(self.pthick / 2)
         t.penup()
         t.goto(self.pxpos, self.pypos)
-        t.done()
+        t.pendown()
+        # t.done()
 
     def pushdisk(self, disk):
+        disk.showdisk()
+        disk.newpos(self.pxpos, self.toppos)
         self.stack.append(disk)
+        self.toppos += disk.dheight
 
     def popdisk(self):
-        d = self.stack.pop()
-        d.dxpos = self.toppos 
-        d.dypos = self.toppos
-        return d
+        if not self.stack:
+            return None 
+
+        self.toppos -= self.stack[-1].dheight
+        a = self.stack.pop()
+        a.cleardisk()
+        return a
     
-def main():
-    t.speed(50)
+# def main():
+#     t.speed(50)
 
-    pole2 = Pole("Pole 2", 0, -50)
+#     pole2 = Pole("Pole 2", 0, -50)
 
-    pole2.showpole()
+#     pole2.showpole()
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
